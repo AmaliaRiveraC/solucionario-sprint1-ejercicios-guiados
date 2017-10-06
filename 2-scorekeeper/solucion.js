@@ -5,25 +5,28 @@ los nombres de tus amigas, y los valores serán los puntajes (todos empiezan con
 Escribe una función que toma dos argumentos, el nombre de tu amiga y la cantidad de
 puntos nuevos que ha obtenido, y que actualice los puntos de la jugadora en el object
 scores. También escribe una función que imprima en la consola el total de los puntos.
-*/
-
 var scores = {
-  pointsCount: 0
+  karla: 8,
+  ameli: 3,
+  amalia: 0
+}
+*/
+var scores = {};
+
+var scoresFriends = function(name, points){
+  if(scores[name] == null){
+    scores[name] = 0;
+  }
+  scores[name] += points;
 };
 
-var scoreFriends = function(name, points){
-  scores = {
-    nameFriends: name,
-    pointsCount: points
-  };
-  printTotalScore(scores);
-};
+var printScores = function(){
+  console.log(scores);
+}
 
-var printTotalScore = function(scores){
- console.log(scores.nameFriends);
- console.log(scores.pointsCount);
-};
-
-scoreFriends('karla',2);
-scoreFriends('Ameli', 4);
-scoreFriends('Lau', 2);
+scoresFriends('Karla', 8);
+scoresFriends('Karla', 8);
+scoresFriends('Manu', 1);
+scoresFriends('Meme', 5);
+scoresFriends('Jonh', null);
+printScores(scores);
