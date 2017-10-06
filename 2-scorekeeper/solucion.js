@@ -24,9 +24,9 @@ var printScores = function(){
   console.log(scores);
 }
 
-scoresFriends('karla', 8);
-scoresFriends('karla', 8);
-scoresFriends('amalia', 1);
+scoresFriends('Karla', 8);
+scoresFriends('Karla', 8);
+scoresFriends('Manu', 1);
 scoresFriends('Meme', 5);
 scoresFriends('Jonh', null);
 printScores(scores);
